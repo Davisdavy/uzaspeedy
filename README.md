@@ -5,7 +5,7 @@
 ### What can you find?
  - A working phone auth.
 
-##ScreenShots
+## ScreenShots
 <img src="./app/src/main/res/drawable/login.png" width="200" height="400">                             <img src="./app/src/main/res/drawable/otp.png" width="200" height="400">
 
 ## Disclaimer!!
