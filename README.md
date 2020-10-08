@@ -14,17 +14,17 @@ This project is still under construction mode
 ## Project setup and Installation
 * installations such as JUnit, intellij, SDK, JDK, Android Studio.
 
-1. Clone the repo `https://github.com/Davisdavy/mymovies.git`
-2. CD into the folder `cd Organisational_API`
+1. Clone the repo `git clone https://github.com/Davisdavy/uzaspeedy`
+2. Build and run th project
 
 * Run App to compile the program
 
 ## Technologies used
 * Java.
 
-*Android.
+* Android.
 
-*Firebase.
+* Firebase.
 
 MIT License
 
