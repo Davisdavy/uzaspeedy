@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "290701309175",
+    "firebase_url": "https://uzaspeedy-27117.firebaseio.com",
+    "project_id": "uzaspeedy-27117",
+    "storage_bucket": "uzaspeedy-27117.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290701309175:android:9e4aa3b33ca7d5ae354ff2",
+        "android_client_info": {
+          "package_name": "com.davis.uzaspeedy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290701309175-mrf5g7fb343ehtovn0lp4osauqg5rurj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.davis.uzaspeedy",
+            "certificate_hash": "a01c3d39a33bcf452a55dc0346ef2878dc135ac8"
+          }
+        },
+        {
+          "client_id": "290701309175-j82sjv8im2s5srpjnkgb3s7nc9r671v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmgG0bDaFqgUwVZqQRRC8l15QS8UzAexw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290701309175-j82sjv8im2s5srpjnkgb3s7nc9r671v7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
