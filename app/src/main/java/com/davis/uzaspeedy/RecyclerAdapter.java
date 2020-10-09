@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         FarmersData farmersData = farmersDataList.get(position);
         holder.name.setText(farmersData.getFarmName());
         holder.location.setText(farmersData.getFarmLocation());
+        holder.image.setImageResource(farmersData.getImageId());
 
     }
 
@@ -41,12 +43,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         return farmersDataList.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView name, location;
-        int phoneNumber;
-        ImageView image;
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+        public TextView name, location;
+        public int phoneNumber;
+        public ImageView image;
         LinearLayout parent;
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
             parent = itemView.findViewById(R.id.parent);
             name = itemView.findViewById(R.id.product_name);

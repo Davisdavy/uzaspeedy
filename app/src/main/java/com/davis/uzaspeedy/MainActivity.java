@@ -51,11 +51,13 @@ public class MainActivity extends AppCompatActivity {
     }
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void DataPrepare(){
-        FarmersData data = new FarmersData("Bahati Farms", "Nairobi, Ngong-Rd");
+        FarmersData data = new FarmersData(R.drawable.one,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
         farmersList.add(data);
-         data = new FarmersData("Bahati Farms", "Nairobi, Ngong-Rd");
+         data = new FarmersData(R.drawable.two,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
         farmersList.add(data);
-        data = new FarmersData("Bahati Farms", "Nairobi, Ngong-Rd");
+        data = new FarmersData(R.drawable.three,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
+        farmersList.add(data);
+        data = new FarmersData(R.drawable.four,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
         farmersList.add(data);
         Collections.sort(farmersList, new Comparator<FarmersData>() {
             @Override
