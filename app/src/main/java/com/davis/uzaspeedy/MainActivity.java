@@ -1,5 +1,6 @@
 package com.davis.uzaspeedy;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,9 @@ import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerAdapter mAdapter;
     private RecyclerView recyclerView;
     @TargetApi(Build.VERSION_CODES.O)
-    /* TODO-----------Add list here// */
     private ArrayList<FarmersData> farmersList = new ArrayList<>();
 
     @Override
@@ -88,5 +91,28 @@ public class MainActivity extends AppCompatActivity {
             startActivity(loginIntent);
             finish();
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.action_logout){
+            //logout user
+            logoutUser();
+            return true;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    private void logoutUser(){
+        mAuth.signOut();
+        Intent logOutIntent = new Intent(MainActivity.this, LoginActivity.class);
+        logOutIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(logOutIntent);
+        finish();
     }
 }
