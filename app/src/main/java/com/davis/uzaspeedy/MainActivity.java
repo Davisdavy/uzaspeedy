@@ -10,19 +10,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
-import java.util.Collection;
+
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Uzaspeedy"); // for set actionbar title
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        Spannable text = new SpannableString(Objects.requireNonNull(getSupportActionBar()).getTitle());
+        text.setSpan(new ForegroundColorSpan(Color.WHITE), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        Objects.requireNonNull(getSupportActionBar()).setTitle(text);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
         recyclerView = findViewById(R.id.recycler_view);
         mAdapter = new RecyclerAdapter(farmersList);
         RecyclerView.LayoutManager manager = new GridLayoutManager(this, 2);
@@ -59,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
          data = new FarmersData(R.drawable.two,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
         farmersList.add(data);
         data = new FarmersData(R.drawable.three,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
+        farmersList.add(data);
+        data = new FarmersData(R.drawable.four,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
+        farmersList.add(data);
+        data = new FarmersData(R.drawable.four,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
         farmersList.add(data);
         data = new FarmersData(R.drawable.four,"Bahati Farms", "Nairobi, Ngong-Rd","07********");
         farmersList.add(data);
